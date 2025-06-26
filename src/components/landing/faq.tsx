@@ -7,20 +7,20 @@ import {
   
 const faqs = [
     {
-        question: "Who is Aeonium for?",
-        answer: "Our themes are for developers who want pre-created templates for their projects, whether for personal use, a new SaaS business, or client websites. They offer speed, customization, built-in SEO, and image optimization, saving you weeks of time and effort."
+        question: "How does the AI data query work?",
+        answer: "You can simply type your question in natural language (e.g., 'What were our total sales last month?'), and our AI assistant will analyze your connected data sources to provide an answer. No complex SQL queries needed."
     },
     {
-        question: "What components are included?",
-        answer: "We provide over 60 components, including multiple hero, feature, service, and testimonial sections, FAQ accordions, contact forms, legal pages, blog layouts, and a cookie banner."
+        question: "What kind of data can I connect to Aeonium Insights?",
+        answer: "You can upload data via CSV files. We are actively working on adding direct integrations with popular databases like PostgreSQL, MySQL, and platforms like Google Analytics and Salesforce."
     },
     {
-        question: "What do you mean by 'free updates'?",
-        answer: "When you purchase any of our products, you get lifetime updates for free. We regularly update our tools to ensure compatibility with the latest technologies and to add new features or bug fixes."
+        question: "Is my data secure?",
+        answer: "Absolutely. We prioritize data security. All data is encrypted both in transit and at rest. We adhere to strict security protocols to ensure your information is always protected."
     },
     {
-        question: "Can I use a theme for multiple projects?",
-        answer: "Yes, you can use our products for as many projects as you like. You can even sell websites you create with them to your clients. As long as you don't resell the theme itself, you're good to go."
+        question: "Can I customize the dashboards?",
+        answer: "Yes! Aeonium Insights offers flexible and customizable dashboards. You can create reports and visualizations that are tailored to your specific business needs and KPIs."
     }
 ]
 

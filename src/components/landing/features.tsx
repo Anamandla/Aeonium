@@ -1,12 +1,12 @@
-import { Blocks, AppWindow, Cloud, Heart, LayoutGrid, Wand } from "lucide-react";
+import { BarChart, Blocks, CloudCog, LayoutGrid, Users, Wand2 } from "lucide-react";
 
 const featuresList = [
-  { icon: Heart, title: "Connect all our contacts", description: "Sync with your calendar apps and contacts. Google, Outlook, and more." },
-  { icon: LayoutGrid, title: "Dashboards for all businesses", description: "Customizable dashboards to fit the unique needs of your business." },
-  { icon: Cloud, title: "Synced to the cloud", description: "Your data is accessible from everywhere, syncing across all your devices." },
-  { icon: AppWindow, title: "Your business intelligence, simplified", description: "We provide the tools to make your data work for you, not the other way around." },
-  { icon: Wand, title: "Real-time insights", description: "Data syncs across your team instantly. Real-time access, with 99.9% uptime." },
-  { icon: Blocks, title: "Connect to popular apps", description: "Integrate with the tools you already use and love." },
+  { icon: Wand2, title: "AI-Powered Queries", description: "Ask questions in natural language and get instant insights from your data. No SQL required." },
+  { icon: LayoutGrid, title: "Customizable Dashboards", description: "Create and share beautiful, interactive dashboards to visualize your key metrics." },
+  { icon: Blocks, title: "Seamless Integrations", description: "Connect to your favorite data sources, from databases to analytics platforms, with ease." },
+  { icon: Users, title: "Collaboration Tools", description: "Work with your team, share insights, and make data-driven decisions together." },
+  { icon: CloudCog, title: "Secure & Cloud-Hosted", description: "Your data is safe, secure, and accessible from anywhere, on any device." },
+  { icon: BarChart, title: "Real-Time Insights", description: "Get up-to-the-minute data and reports to stay ahead of the curve." },
 ];
 
 export default function Features() {
