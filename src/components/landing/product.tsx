@@ -1,73 +1,39 @@
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { CheckCircle, Zap, Bot } from "lucide-react";
-
-const productFeatures = [
-  {
-    icon: CheckCircle,
-    title: "Collaboration & Productivity Suite",
-    description: "Stay connected, organized, and in control.",
-    features: [
-      "Real-time dashboards",
-      "Shared workspaces",
-      "AI-powered task tracking",
-      "Report generation & scheduling",
-    ],
-  },
-  {
-    icon: Zap,
-    title: "Automation Builder",
-    description: "Automate tasks. Save time. Scale faster.",
-    features: [
-      "No-code automation workflows",
-      "Pre-built industry templates",
-      "Custom triggers & actions",
-      "Slack, Email, and Zapier integrations",
-    ],
-  },
-  {
-    icon: Bot,
-    title: "AI & ML Toolkit",
-    description: "Let your data speak. Predict. Prescribe. Prosper.",
-    features: [
-      "Natural-language data queries",
-      "Automated insights & anomaly detection",
-      "Forecasting & trend modeling",
-      "Churn prediction, sales prediction & more",
-    ],
-  },
-];
+import { Button } from "../ui/button";
+import Image from 'next/image';
+import { PlayCircle } from "lucide-react";
 
 export default function Product() {
   return (
-    <section id="product" className="py-24 sm:py-32">
+    <section id="product" className="py-16 md:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            One Platform. Limitless Possibilities.
-          </h2>
+        <div className="mx-auto max-w-5xl text-center">
+            <p className="colored-title">Data driven insights</p>
+            <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl mt-4">
+                Watch how our data solutions solve your problems
+            </h2>
         </div>
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
-          {productFeatures.map((item) => (
-            <Card key={item.title} className="flex flex-col">
-              <CardHeader>
-                <div className="flex items-center gap-4">
-                    <item.icon className="h-8 w-8 text-primary" />
-                    <CardTitle className="font-headline text-2xl">{item.title}</CardTitle>
-                </div>
-                <p className="pt-2 text-muted-foreground">{item.description}</p>
-              </CardHeader>
-              <CardContent className="flex flex-1 flex-col">
-                <ul className="space-y-4 text-sm text-muted-foreground flex-1">
-                  {item.features.map((feature) => (
-                    <li key={feature} className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="mx-auto max-w-4xl mt-12">
+            <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-br from-primary to-accent rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
+                <button className="relative w-full h-full rounded-2xl overflow-hidden border border-border">
+                    <Image 
+                        src="https://placehold.co/1500x938.png" 
+                        alt="Dashboard preview"
+                        width={1500}
+                        height={938}
+                        className="w-full h-auto"
+                        data-ai-hint="dashboard analytics"
+                    />
+                    <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                        <div className="relative flex items-center justify-center w-20 h-20">
+                            <div className="absolute w-full h-full rounded-full bg-primary/70 blur-sm group-hover:animate-ping motion-safe:animate-ping z-10"></div>
+                            <div className="relative z-20 bg-background/80 backdrop-blur-sm border-2 border-primary rounded-full p-2 group-hover:border-primary/70 transition">
+                                <PlayCircle className="w-16 h-16 text-primary" />
+                            </div>
+                        </div>
+                    </div>
+                </button>
+            </div>
         </div>
       </div>
     </section>

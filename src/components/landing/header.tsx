@@ -8,9 +8,9 @@ import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const navItems = [
-  { name: 'About', href: '#about' },
   { name: 'Product', href: '#product' },
   { name: 'Features', href: '#features' },
+  { name: 'Testimonials', href: '#testimonials' },
   { name: 'Pricing', href: '#pricing' },
 ];
 
@@ -44,7 +44,7 @@ export default function Header() {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        isScrolled || isMobileMenuOpen ? 'bg-background/80 backdrop-blur-sm shadow-md' : 'bg-transparent'
+        isScrolled || isMobileMenuOpen ? 'bg-background/80 backdrop-blur-sm border-b border-border' : 'bg-transparent'
       )}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -66,9 +66,12 @@ export default function Header() {
               </Link>
             ))}
           </nav>
-          <div className="hidden md:flex items-center gap-2">
+          <div className="hidden md:flex items-center gap-4">
+            <Button variant="ghost" asChild>
+                <Link href="#contact">Sign In</Link>
+            </Button>
             <Button asChild>
-                <Link href="#contact">Book a Call</Link>
+                <Link href="#contact">Sign Up</Link>
             </Button>
           </div>
           <div className="md:hidden">
@@ -96,9 +99,14 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-             <Button asChild size="lg" className="mt-8">
-                <Link href="#contact" onClick={handleLinkClick}>Book a Call</Link>
-            </Button>
+             <div className="flex flex-col gap-4 w-full max-w-xs pt-8">
+                <Button asChild size="lg">
+                    <Link href="#contact" onClick={handleLinkClick}>Sign Up</Link>
+                </Button>
+                <Button asChild size="lg" variant="outline">
+                    <Link href="#contact" onClick={handleLinkClick}>Sign In</Link>
+                </Button>
+            </div>
           </nav>
         </div>
       )}
