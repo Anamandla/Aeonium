@@ -3,16 +3,23 @@ export function Logo(props: React.SVGProps<SVGSVGElement>) {
     <svg
       width="24"
       height="24"
-      viewBox="0 0 24 24"
+      viewBox="0 0 256 256"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <path d="M12 2.69l5.66 5.66a8 8 0 01-11.32 0L12 2.69z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-      <path d="M2.69 12l5.66 5.66a8 8 0 000-11.32L2.69 12z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-      <path d="M12 21.31l-5.66-5.66a8 8 0 0111.32 0L12 21.31z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-      <path d="M21.31 12l-5.66-5.66a8 8 0 000 11.32L21.31 12z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-      <circle cx="12" cy="12" r="2" stroke="currentColor" strokeWidth="1.5"/>
+      <path
+        d="M128 37.1629C117.917 60.1065 108.973 73.4915 88.234 94.2305C88.234 94.2305 106.562 82.2988 128 82.2988C149.438 82.2988 167.766 94.2305 167.766 94.2305C147.027 73.4915 138.083 60.1065 128 37.1629Z"
+        fill="#d6c8f2"
+      />
+      <path
+        d="M88.2344 94.2305C77.875 104.59 71.9334 115.542 68.3751 124.965C87.4844 116.133 107.031 112.512 128 112.512C148.969 112.512 168.516 116.133 187.625 124.965C184.067 115.542 178.125 104.59 167.766 94.2305C147.027 73.4915 138.083 60.1065 128 37.1629C117.917 60.1065 108.973 73.4915 88.2344 94.2305Z"
+        fill="#9378d0"
+      />
+      <path
+        d="M68.375 124.965C41.75 145.461 -1.49999 186.336 26.25 218C52.125 247.75 203.875 247.75 229.75 218C257.5 186.336 214.25 145.461 187.625 124.965C168.516 116.133 148.969 112.512 128 112.512C107.031 112.512 87.4844 116.133 68.375 124.965Z"
+        fill="#5e4596"
+      />
     </svg>
   );
 }
