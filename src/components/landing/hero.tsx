@@ -4,8 +4,8 @@ import Link from 'next/link';
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center">
-      <div className="absolute inset-0 bg-background -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
+      <div className="absolute inset-0 bg-transparent -z-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10"></div>
         <div 
             className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-background to-transparent"
         />
