@@ -1,5 +1,4 @@
 // src/ai/flows/ask-data-with-ai.ts
-'use server';
 
 /**
  * @fileOverview An AI agent that allows users to ask questions about their data using natural language.

@@ -1,51 +1,37 @@
 "use client";
 
 import { useState } from 'react';
-import { askDataWithAI } from '@/ai/flows/ask-data-with-ai';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Loader2, Sparkles } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
-
-const sampleData = `product_id,product_name,category,price,stock_quantity,sales_last_month
-101,Laptop Pro,Electronics,1200,50,25
-102,Smartphone X,Electronics,800,150,80
-103,Coffee Maker,Home Goods,50,200,120
-104,Running Shoes,Apparel,90,300,90
-105,Desk Chair,Furniture,150,100,40
-106,Wireless Mouse,Electronics,25,500,200
-`;
 
 export default function AIAssistant() {
     const [question, setQuestion] = useState('');
     const [answer, setAnswer] = useState('');
     const [isLoading, setIsLoading] = useState(false);
-    const { toast } = useToast();
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         if (!question.trim()) return;
 
         setIsLoading(true);
         setAnswer('');
         
-        try {
-            const result = await askDataWithAI({
-                question,
-                dataContext: `Here is some sample sales data in CSV format:\n\n${sampleData}`
-            });
-            setAnswer(result.answer);
-        } catch (err) {
-            toast({
-              variant: "destructive",
-              title: "Error",
-              description: "An error occurred while fetching the AI response. Please try again.",
-            })
-            console.error(err);
-        } finally {
+        // Simulate API call for static export compatibility
+        setTimeout(() => {
+            const normalizedQuestion = question.toLowerCase().trim().replace(/\?$/, '');
+            const sampleResponses: Record<string, string> = {
+                'which product has the highest price': 'The "Laptop Pro" has the highest price at 1200.',
+                'what is the total stock quantity': 'The total stock quantity is 1150 units.',
+                'how many electronics products were sold last month': 'A total of 105 electronics products were sold last month (25 for Laptop Pro, and 80 for Smartphone X).',
+            };
+            
+            const response = sampleResponses[normalizedQuestion] || "This is a demo! I can only answer a few specific questions. Try asking: 'Which product has the highest price?'";
+
+            setAnswer(response);
             setIsLoading(false);
-        }
+        }, 1500);
     };
 
     return (
