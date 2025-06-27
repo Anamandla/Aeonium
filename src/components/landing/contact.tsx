@@ -8,9 +8,9 @@ export default function Contact() {
         <div className="relative rounded-xl bg-background p-8 md:p-12">
             <div className="mx-auto grid gap-8 max-w-3xl md:grid-cols-3">
               <div className="md:col-span-2">
-                  <p className="colored-title">What are you waiting for?</p>
+                  <p className="colored-title">Start Your Journey</p>
                   <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl mt-4">
-                      Get your effective website up in a snap.
+                      Unlock the Power of Your Data Today.
                   </h2>
               </div>
               <div className="flex justify-start items-end md:justify-end">

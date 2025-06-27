@@ -3,23 +3,23 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const testimonials = [
   {
-    quote: "I'm not a front-end dev, but I wanted to rebuild my personal site with modern tools. Aeonium made it possible to focus on what matters.",
+    quote: "The AI query feature is a game-changer. I can get complex data insights in seconds without writing a single line of SQL.",
     name: "Sipho Ndlovu",
     title: "Data Scientist",
     avatar: "SN",
     image: "https://placehold.co/100x100.png"
   },
   {
-    quote: "The automation builder is ridiculously well put together and documented. I learned a ton by studying it.",
+    quote: "As a marketing manager, the automation builder has saved my team countless hours. We've automated our weekly reports and can focus more on strategy.",
     name: "Aisha Patel",
-    title: "Frontend Engineer",
+    title: "Marketing Manager",
     avatar: "AP",
     image: "https://placehold.co/100x100.png"
   },
   {
-    quote: "It's the cleanest template standup experience ever! It was fairly simple to pick up on top of my existing React and NextJS experience.",
+    quote: "Finally, a BI tool that doesn't require a whole engineering team to manage. I can build the dashboards I need to run my business effectively.",
     name: "Mike van der Merwe",
-    title: "Web Developer",
+    title: "Chief Operating Officer",
     avatar: "MM",
     image: "https://placehold.co/100x100.png"
   },
