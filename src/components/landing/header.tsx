@@ -14,6 +14,8 @@ const navItems = [
   { name: 'Pricing', href: '#pricing' },
 ];
 
+const logoPath = `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/favicon.png`;
+
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -50,7 +52,7 @@ export default function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center gap-2" onClick={handleLinkClick}>
-            <Image src="/favicon.png" alt="Aeonium Logo" width={32} height={32} className="h-8 w-8" />
+            <Image src={logoPath} alt="Aeonium Logo" width={32} height={32} className="h-8 w-8" />
             <span className="font-headline text-xl font-bold text-foreground">
               Aeonium
             </span>
