@@ -1,21 +1,32 @@
 "use client";
 
 import { useState } from 'react';
-import { askDataWithAI } from '@/ai/flows/ask-data-with-ai';
+// import { askDataWithAI } from '@/ai/flows/ask-data-with-ai'; // No longer needed for simulation
 import { useToast } from "@/hooks/use-toast";
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Loader2, Sparkles } from 'lucide-react';
 
-// The sample data context provided to the AI.
-const dataContext = `product_id,product_name,category,price,stock_quantity,sales_last_month
-101,Laptop Pro,Electronics,1200,50,25
-102,Smartphone X,Electronics,800,150,80
-103,Coffee Maker,Home Goods,50,200,120
-104,Running Shoes,Apparel,90,300,90
-105,Desk Chair,Furniture,150,100,40
-106,Wireless Mouse,Electronics,25,500,200`;
+// Simulated responses for different questions
+const simulatedResponses: { [key: string]: string } = {
+    "which product has the highest price?": "The 'Laptop Pro' has the highest price at 1200.",
+    "what is the total stock quantity?": "The total stock quantity is 1250 units.",
+    "what is the capital of france?": "The capital of France is Paris.",
+    "how many products are in the electronics category?": "There are 3 products in the Electronics category: Laptop Pro, Smartphone X, and Wireless Mouse.",
+    "which product had the most sales last month?": "The 'Wireless Mouse' had the most sales last month with 200 units sold."
+};
+
+// A function to simulate the AI call
+const simulateAIAssistant = (question: string): Promise<{ answer: string }> => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            const lowerCaseQuestion = question.toLowerCase().trim().replace(/[?]/g, '');
+            const answer = simulatedResponses[lowerCaseQuestion] || "I'm sorry, I don't have an answer for that right now. Try asking about our product data!";
+            resolve({ answer });
+        }, 1500); // Simulate network delay
+    });
+};
 
 export default function AIAssistant() {
     const [question, setQuestion] = useState('');
@@ -31,16 +42,14 @@ export default function AIAssistant() {
         setAnswer('');
         
         try {
-            const response = await askDataWithAI({
-                question: question,
-                dataContext: dataContext,
-            });
+            // Use the simulation function instead of the real AI call
+            const response = await simulateAIAssistant(question);
             setAnswer(response.answer);
         } catch (error) {
             console.error(error);
             toast({
                 title: "Error",
-                description: "Failed to get a response from the AI. Please try again.",
+                description: "Failed to get a response. Please try again.",
                 variant: "destructive",
             });
         } finally {
