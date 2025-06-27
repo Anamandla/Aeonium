@@ -1,10 +1,8 @@
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
-
-const logoPath = `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/favicon.png`;
+import { Logo } from "../logo";
 
 export default function Footer() {
     return (
@@ -13,7 +11,7 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div className="space-y-4">
                         <Link href="/" className="flex items-center gap-2">
-                            <Image src={logoPath} alt="Aeonium Logo" width={32} height={32} className="h-8 w-8" />
+                            <Logo className="h-8 w-8" />
                             <span className="font-headline text-xl font-bold text-foreground">
                             Aeonium
                             </span>

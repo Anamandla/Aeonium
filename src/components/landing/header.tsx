@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Logo } from '../logo';
 
 const navItems = [
   { name: 'Product', href: '#product' },
@@ -13,8 +13,6 @@ const navItems = [
   { name: 'Testimonials', href: '#testimonials' },
   { name: 'Pricing', href: '#pricing' },
 ];
-
-const logoPath = `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/favicon.png`;
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -52,7 +50,7 @@ export default function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center gap-2" onClick={handleLinkClick}>
-            <Image src={logoPath} alt="Aeonium Logo" width={32} height={32} className="h-8 w-8" />
+            <Logo className="h-8 w-8" />
             <span className="font-headline text-xl font-bold text-foreground">
               Aeonium
             </span>

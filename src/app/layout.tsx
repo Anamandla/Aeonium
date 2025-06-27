@@ -3,16 +3,18 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import GalaxyBackground from '@/components/galaxy-background';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export const metadata: Metadata = {
   title: 'Aeonium Insights',
   description: 'Empowering Businesses with AI-Powered Insights',
   icons: {
     icon: [
-        { url: '/favicon.png', type: 'image/png' },
-        { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-        { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+        { url: `${basePath}/favicon.png`, type: 'image/png' },
+        { url: `${basePath}/favicon-32x32.png`, sizes: '32x32', type: 'image/png' },
+        { url: `${basePath}/favicon-16x16.png`, sizes: '16x16', type: 'image/png' },
     ],
-    apple: '/apple-touch-icon.png',
+    apple: `${basePath}/apple-touch-icon.png`,
   },
 };
 
